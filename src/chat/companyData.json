@@ -1,0 +1,133 @@
+{
+  "name": "Limehills",
+  "tagline": "Creative digital experiences, end-to-end",
+  "description": "Limehills is a full-service digital agency delivering branding, product design, web and software development, cloud services, and data and AI solutions. We help startups and small and medium-sized enterprises (SMEs) build memorable, high-performance, and secure digital products.",
+  "contactEmail": "hello@limehills.example",
+  "phone": "+1-555-0123",
+  "address": {
+    "line1": "123 Lime Street",
+    "city": "Exampleville",
+    "region": "State",
+    "postalCode": "12345",
+    "country": "Country"
+  },
+  "hours": "Mon-Sat 10am-8pm (local time)",
+  "officeHours": {
+    "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    "open": "10:00",
+    "close": "08:00",
+    "timezone": "local",
+    "note": "Office is closed on Sundays."
+  },
+  "services": {
+    "branding": {
+      "summary": "Brand strategy, visual identity, naming, and brand guidelines.",
+      "commonRequests": ["logo design", "brand refresh", "brand guidelines"]
+    },
+    "web_and_software": {
+      "summary": "Custom web applications, single-page applications, and backend systems built with modern stacks.",
+      "technologies": ["React", "TypeScript", "Node.js", "Express", "Laravel", "Python"],
+      "commonRequests": ["marketing website", "dashboard app", "SaaS product", "internal tools"]
+    },
+    "mobile": {
+      "summary": "Cross-platform and native mobile apps for iOS and Android.",
+      "technologies": ["React Native", "Flutter", "Swift", "Kotlin"],
+      "commonRequests": ["consumer app", "enterprise mobile", "push notifications"]
+    },
+    "cloud_solutions": {
+      "summary": "Cloud architecture, migrations, and managed infrastructure on AWS, Azure, and Google Cloud.",
+      "technologies": ["AWS", "Azure", "Google Cloud", "Kubernetes", "Docker"],
+      "commonRequests": ["cloud migration", "k8s clusters", "cost optimization"]
+    },
+    "cybersecurity": {
+      "summary": "Security assessments, vulnerability testing, and continuous monitoring.",
+      "technologies": ["Splunk", "Snort", "AWS Security Hub"],
+      "commonRequests": ["penetration testing", "SOC setup", "vulnerability assessments"]
+    },
+    "devops": {
+      "summary": "CI/CD pipelines, automation, IaC and release engineering.",
+      "technologies": ["Jenkins", "GitHub Actions", "Terraform", "AWS CloudFormation"],
+      "commonRequests": ["CI/CD pipeline", "infrastructure as code", "automated deployments"]
+    },
+    "data_ai": {
+      "summary": "Data analytics, reporting, and machine learning solutions to drive insights and automation.",
+      "technologies": ["Python", "Pandas", "NumPy", "TensorFlow", "Power BI"],
+      "commonRequests": ["data pipeline", "dashboards", "predictive models"]
+    },
+    "application_consulting": {
+      "summary": "Platform integrations and consulting for tools like Jira, Shopify, WordPress, and WooCommerce.",
+      "commonRequests": ["Shopify customization", "WordPress performance", "Jira process improvements"]
+    }
+  },
+  "commonQuestions": [
+    {
+      "q": "What services do you offer?",
+      "a": "We offer branding, web & software development, mobile apps, cloud solutions, cybersecurity, DevOps, data & AI, and platform consulting (Shopify, WordPress, Jira, etc.)."
+    },
+    {
+      "q": "How much does a project cost?",
+      "a": "Costs depend on scope, complexity, and timeline. Typical small websites start around $5k–$15k, mid-size apps range from $25k–$100k, and enterprise systems are quoted per requirements. We provide a free project scoping call to give an accurate estimate."
+    },
+    {
+      "q": "What is your process?",
+      "a": "Discovery -> Design -> Development -> QA -> Launch -> Support. We emphasize incremental delivery and frequent demos so stakeholders see progress early."
+    },
+    {
+      "q": "How long will my project take?",
+      "a": "Timelines vary. A brochure website: 2–6 weeks. A complex web app or mobile app: 3–6 months. Enterprise platform work: depends on integrations and compliance needs."
+    },
+    {
+      "q": "Do you sign NDAs?",
+      "a": "Yes — we can sign NDAs before discovery and work that requires confidentiality."
+    },
+    {
+      "q": "How do you handle support and maintenance?",
+      "a": "We offer monthly maintenance plans and ad-hoc support. Maintenance covers security updates, small improvements, and monitoring. We can also run SLA-backed support for critical systems."
+    }
+  ],
+  "process": {
+    "discovery": "We run stakeholder interviews, requirements workshops, and technical audits to establish scope and success metrics.",
+    "design": "UX and visual design with interactive prototypes for stakeholder feedback.",
+    "development": "Agile sprints, continuous integration, automated testing, and incremental releases.",
+    "qa_and_launch": "Thorough QA, performance tuning, and a staged launch with rollback plans.",
+    "post_launch": "Monitoring, analytics, optimizations, and optional ongoing support or managed services."
+  },
+  "caseStudies": [
+    {
+      "title": "Growth platform for a SaaS startup",
+      "summary": "Built a subscription management dashboard and analytics pipeline; reduced churn by 12% and improved onboarding conversions by 22%.",
+      "technologies": ["React", "Node.js", "Postgres", "AWS"]
+    },
+    {
+      "title": "E-commerce migration",
+      "summary": "Migrated a mid-market retailer from legacy platform to Shopify Plus with custom integrations, improving site speed and checkout conversion.",
+      "technologies": ["Shopify", "Liquid", "AWS", "Custom APIs"]
+    }
+  ],
+  "testimonials": [
+    {
+      "author": "Jane D., CEO",
+      "text": "Limehills helped us rebrand and relaunch our product — their design and engineering teams were fantastic and delivered on time."
+    },
+    {
+      "author": "Sam K., Head of Product",
+      "text": "Their pragmatic approach to architecture saved us significant costs and sped delivery."
+    }
+  ],
+  "pricingGuidance": {
+    "small": "$5k - $15k (brochure sites, small apps)",
+    "medium": "$25k - $100k (mid-sized apps, integrations)",
+    "enterprise": "Custom quote (dependent on requirements, compliance, and integrations)"
+  },
+  "team": {
+    "size": "10-25",
+    "roles": ["Designers", "Frontend Engineers", "Backend Engineers", "Mobile Engineers", "DevOps", "Data Scientists", "Project Managers", "QA"]
+  },
+  "industries": ["SaaS", "Retail/eCommerce", "Healthcare", "Fintech", "Education"],
+  "faqs": {
+    "onboarding": "We set up a kickoff, align on milestones, and provide a delivery schedule after discovery.",
+    "security": "We follow standard security practices, offer pen testing, and can implement SOC/ISO controls on request.",
+    "ndas": "Available on request prior to discovery."
+  },
+  "additionalInfo": "General inquiries answered during office hours: 10am - 8pm, Monday - Saturday. For urgent matters outside these hours, please email hello@limehills.example and we will respond as soon as possible."
+}

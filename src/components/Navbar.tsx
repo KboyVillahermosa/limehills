@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
+import ChatWidget from './ChatWidget'
 
 const Navbar: React.FC = () => {
   const [open, setOpen] = useState(false)
@@ -139,3 +140,13 @@ const Navbar: React.FC = () => {
 }
 
 export default Navbar
+
+// ensure chat widget mounts across pages
+export const NavbarWithChat: React.FC = () => {
+  return (
+    <>
+      <Navbar />
+      <ChatWidget />
+    </>
+  )
+}
