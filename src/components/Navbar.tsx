@@ -74,10 +74,10 @@ const Navbar: React.FC = () => {
         </div>
 
         <nav className="hidden md:flex items-center gap-8" aria-label="Main navigation">
-          <a href="#home" className="text-sm text-white/90 hover:text-white">Home</a>
-          <a href="#about" className="text-sm text-white/90 hover:text-white">About</a>
-          <a href="#services" className="text-sm text-white/90 hover:text-white">Services</a>
-          <a href="#careers" className="text-sm text-white/90 hover:text-white">Careers</a>
+          <a href="/" className="text-sm text-white/90 hover:text-white">Home</a>
+          <a href="/about" className="text-sm text-white/90 hover:text-white">About</a>
+          <a href="/services" className="text-sm text-white/90 hover:text-white">Services</a>
+          <a href="/careers" className="text-sm text-white/90 hover:text-white">Careers</a>
           <a href="#contact" className="text-sm bg-[#3b40d6] hover:bg-[#2b2fc4] text-white rounded-full px-4 py-2">Contact Us</a>
         </nav>
 
@@ -122,10 +122,34 @@ const Navbar: React.FC = () => {
             </div>
 
             <nav className="space-y-4">
-              <a href="#home" className="block text-white text-lg font-medium py-3">Home</a>
-              <a href="#about" className="block text-white text-lg font-medium py-3">About</a>
-              <a href="#services" className="block text-white text-lg font-medium py-3">Services</a>
-              <a href="#careers" className="block text-white text-lg font-medium py-3">Careers</a>
+              <a
+                href="/"
+                onClick={() => setOpen(false)}
+                className="block text-white text-lg font-medium py-3"
+              >
+                Home
+              </a>
+              <a
+                href="/about"
+                onClick={() => setOpen(false)}
+                className="block text-white text-lg font-medium py-3"
+              >
+                About
+              </a>
+              <a
+                href="/services"
+                onClick={() => setOpen(false)}
+                className="block text-white text-lg font-medium py-3"
+              >
+                Services
+              </a>
+              <a
+                href="/careers"
+                onClick={() => setOpen(false)}
+                className="block text-white text-lg font-medium py-3"
+              >
+                Careers
+              </a>
             </nav>
 
             <div className="mt-8">
