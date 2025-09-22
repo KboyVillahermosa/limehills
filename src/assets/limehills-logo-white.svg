@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="64" viewBox="0 0 400 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Limehills logo">
+  <rect width="400" height="64" fill="transparent" />
+  <!-- simple mark -->
+  <g transform="translate(6,6)">
+    <rect x="0" y="0" width="48" height="48" rx="8" fill="#FFFFFF" opacity="0"/>
+    <path d="M8 32 L24 8 L40 32" fill="#FFFFFF" opacity="1" transform="translate(0,0) scale(1,1)" />
+  </g>
+  <!-- Text -->
+  <text x="72" y="42" fill="#FFFFFF" font-family="Inter, Arial, Helvetica, sans-serif" font-size="28" font-weight="700">LIMEHILLS</text>
+  <text x="72" y="56" fill="#FFFFFF" font-family="Inter, Arial, Helvetica, sans-serif" font-size="12">Technologies Inc.</text>
+</svg>

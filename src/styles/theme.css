@@ -1,0 +1,114 @@
+:root{
+  /* Primary brand */
+  --color-primary: #3b40d6; /* deep indigo */
+  --color-primary-dark: #2b2fc4;
+  --color-accent: #6b7af8;
+
+  /* Background / contrast */
+  --color-bg: #ffffff;
+  --color-bg-contrast: #2f3192; /* left panel color from design */
+  --color-on-contrast: #ffffff;
+
+  /* Text */
+  --color-text: #0b1030;
+  --color-muted: #667085;
+
+  /* Other */
+  --container-max: 1200px;
+}
+
+/* basic resets for the app */
+html,body,#root{height:100%}
+body{font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:var(--color-bg); color:var(--color-text);}
+
+.btn{display:inline-block;text-decoration:none;cursor:pointer}
+.btn--primary{background:var(--color-primary);color:white;padding:.55rem .9rem;border-radius:8px}
+.btn--muted{background:transparent;border:1px solid rgba(11,16,48,0.06);padding:.5rem .85rem;border-radius:8px;color:var(--color-text)}
+
+.app-root{min-height:100vh;display:flex;flex-direction:column}
+
+/* Work section styles */
+.dash-path{
+  stroke-dashoffset: 0;
+  animation: dashMove 6s linear infinite;
+}
+
+.step{ /* remove fixed width so absolute centering works */
+  width:auto;
+}
+.step-icon{
+  width:72px;
+  height:72px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:9999px;
+  font-size:28px;
+  box-shadow:0 10px 20px rgba(11,16,48,0.06);
+  transform:translateY(0);
+  animation: floatStep 4s ease-in-out infinite;
+}
+
+/* Slightly offset animations to feel organic */
+.step:nth-child(2) .step-icon{animation-delay:0.2s}
+.step:nth-child(3) .step-icon{animation-delay:0.4s}
+.step:nth-child(4) .step-icon{animation-delay:0.6s}
+
+@keyframes dashMove{
+  0%{stroke-dashoffset:0}
+  100%{stroke-dashoffset:36}
+}
+
+@keyframes floatStep{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-12px)}
+  100%{transform:translateY(0)}
+}
+
+@media (prefers-reduced-motion: reduce){
+  .dash-path, .step-icon{animation:none}
+}
+
+/* assemble-on-scroll: elements start hidden and transition in when .is-visible is added */
+
+.work-root .dash-path{opacity:0;stroke-dashoffset:80;transition:stroke-dashoffset 900ms linear, opacity 400ms ease}
+
+/* position step nodes absolutely based on SVG viewBox coords - center them with transform */
+.work-root .step{
+  position:absolute;
+  transform:translate(-50%, -50%);
+  opacity:0;
+}
+
+.work-root .step-inner{
+  transform:translateY(18px) scale(0.98);
+  transition:transform 520ms cubic-bezier(.2,.8,.2,1), opacity 420ms ease;
+  opacity:0;
+}
+
+.work-root.is-visible .dash-path{opacity:1;stroke-dashoffset:0}
+.work-root.is-visible .step{opacity:1}
+.work-root.is-visible .step-inner{opacity:1;transform:translateY(0) scale(1)}
+
+/* stagger steps using data-order attribute */
+.work-root.is-visible .step[data-order="1"] .step-inner{transition-delay:120ms}
+.work-root.is-visible .step[data-order="2"] .step-inner{transition-delay:260ms}
+.work-root.is-visible .step[data-order="3"] .step-inner{transition-delay:400ms}
+.work-root.is-visible .step[data-order="4"] .step-inner{transition-delay:540ms}
+
+@media (prefers-reduced-motion: reduce){
+  .work-root .dash-path, .work-root .step{transition:none}
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px){
+  .work-root svg{height:220px}
+  .step-icon{width:56px;height:56px;font-size:20px}
+  .step-label{font-size:14px}
+}
+
+@media (min-width: 768px){
+  .work-root svg{height:260px}
+}
+
+
