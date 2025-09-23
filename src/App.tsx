@@ -8,6 +8,7 @@ import AboutPage from './pages/AboutPage'
 import ServicesPage from './pages/ServicesPage'
 import CareersPage from './pages/CareersPage'
 import Footer from './components/footer/Footer'
+import Team from './components/team/Team'
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <main>
           <Hero />
           <About />
+          <Team />
           <Work />
         </main>
       )}

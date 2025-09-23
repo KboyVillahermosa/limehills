@@ -51,7 +51,7 @@ const Work: React.FC = () => {
   }, [])
 
   return (
-    <section ref={ref} id="work" className="w-full bg-white py-20 overflow-hidden">
+    <section ref={ref} id="work" className="w-full bg-gray-900 py-20 overflow-hidden">
       <div className="mx-auto max-w-6xl px-6 text-center">
         <h2 className="text-4xl md:text-6xl font-extrabold text-[#3b40d6] mb-12">How we work</h2>
 
