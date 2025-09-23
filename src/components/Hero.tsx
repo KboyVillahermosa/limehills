@@ -1,11 +1,13 @@
-'use client'
+ 'use client'
+
+import ClientsSlider from './clients/ClientsSlider'
 
 export default function Example() {
 
 
   return (
     <div className="bg-gray-900">
-      <div className="relative isolate px-6  lg:px-8">
+      <div className="relative isolate px-6 lg:px-8">
           <div
           aria-hidden="true"
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -45,6 +47,11 @@ export default function Example() {
               <a href="#" className="text-sm/6 font-semibold text-white">
                 Learn more <span aria-hidden="true">→</span>
               </a>
+            </div>
+          </div>
+          <div className="mt-12 px-6 lg:px-8">
+            <div className="mx-auto max-w-7xl">
+              <ClientsSlider />
             </div>
           </div>
         </div>

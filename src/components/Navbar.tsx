@@ -1,26 +1,42 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-  { name: 'Product', href: '#' },
-  { name: 'Features', href: '#' },
-  { name: 'Marketplace', href: '#' },
-  { name: 'Company', href: '#' },
+  { name: 'Home', href: '#' },
+  { name: 'About', href: '#' },
+  { name: 'Team', href: '#' },
+  { name: 'Work', href: '#' },
+  { name: 'Team', href: '#' },
+  { name: 'Projects', href: '#' },  
 ]
 
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    function onScroll() {
+      setScrolled(window.scrollY > 10)
+    }
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   return (
-    <div className="bg-gray-900">
+    <div className="fixed w-full z-50">
       <header className="absolute inset-x-0 top-0 z-50">
-        <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
+        <nav
+          aria-label="Global"
+          className={`flex items-center justify-between p-6 lg:px-8 transition-colors duration-200 ${
+            scrolled ? 'bg-gray-900/95 shadow-sm backdrop-blur-sm' : 'bg-transparent'
+          }`}
+        >
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
               <img
                 alt=""
                 src="/src/assets/images/logo.png"
@@ -47,7 +63,7 @@ export default function Example() {
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <a href="#" className="text-sm/6 font-semibold text-white">
-              Log in <span aria-hidden="true">&rarr;</span>
+              Contact Us
             </a>
           </div>
         </nav>
@@ -59,7 +75,7 @@ export default function Example() {
                 <span className="sr-only">Your Company</span>
                 <img
                   alt=""
-                  src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
+                  src="src/assets/images/logo.png"
                   className="h-8 w-auto"
                 />
               </a>
@@ -90,7 +106,7 @@ export default function Example() {
                     href="#"
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-white/5"
                   >
-                    Log in
+                    Contact Us
                   </a>
                 </div>
               </div>
