@@ -1,39 +1,40 @@
+import img1 from '../../assets/images/4.png'
+import img2 from '../../assets/images/6.png'
+import img3 from '../../assets/images/5.png'
+import img4 from '../../assets/images/1.png'
+import img5 from '../../assets/images/2.png'
+import img6 from '../../assets/images/7.png'
+
 const people = [
   {
     name: 'Leslie Alexander',
     role: 'Co-Founder / CEO',
-    imageUrl:
-      'src/assets/images/4.png',
+    imageUrl: img1,
   },
   {
     name: 'Michael Foster',
     role: 'Co-Founder / CTO',
-    imageUrl:
-      'src/assets/images/6.png',
+    imageUrl: img2,
   },
   {
     name: 'Dries Vincent',
     role: 'Business Relations',
-    imageUrl:
-      'src/assets/images/5.png',
+    imageUrl: img3,
   },
   {
     name: 'Lindsay Walton',
     role: 'Front-end Developer',
-    imageUrl:
-        'src/assets/images/1.png',
+    imageUrl: img4,
   },
   {
     name: 'Courtney Henry',
     role: 'Designer',
-    imageUrl:
-      'src/assets/images/2.png',
+    imageUrl: img5,
   },
   {
     name: 'Tom Cook',
     role: 'Director of Product',
-    imageUrl:
-      'src/assets/images/7.png',
+    imageUrl: img6,
   },
 ]
 

@@ -1,5 +1,6 @@
 import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
 import Reveal from '../ui/Reveal'
+import AboutImage from '/src/assets/images/company.jpg'
 
 const features = [
   {
@@ -53,7 +54,7 @@ export default function About() {
           <Reveal>
             <img
               alt="Product screenshot"
-              src="/src/assets/images/company.jpg"
+              src={AboutImage}
               height={1442}
               className="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-white/10 sm:w-228 md:-ml-4 lg:-ml-0"
             />
