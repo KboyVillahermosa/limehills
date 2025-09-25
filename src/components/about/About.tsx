@@ -1,4 +1,5 @@
 import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
+import Reveal from '../ui/Reveal'
 
 const features = [
   {
@@ -23,9 +24,10 @@ const features = [
 
 export default function About() {
   return (
+    <section id='about'>
     <div className="overflow-hidden bg-gray-900 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+        <Reveal className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div className="lg:pt-4 lg:pr-8">
             <div className="lg:max-w-lg">
               <h2 className="text-base/7 font-semibold text-indigo-400">Deploy faster</h2>
@@ -48,14 +50,17 @@ export default function About() {
               </dl>
             </div>
           </div>
-          <img
-            alt="Product screenshot"
-            src="/src/assets/images/bigasan.png"
-            height={1442}
-            className="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-white/10 sm:w-228 md:-ml-4 lg:-ml-0"
-          />
-        </div>
+          <Reveal>
+            <img
+              alt="Product screenshot"
+              src="/src/assets/images/company.jpg"
+              height={1442}
+              className="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-white/10 sm:w-228 md:-ml-4 lg:-ml-0"
+            />
+          </Reveal>
+        </Reveal>
       </div>
     </div>
+    </section>
   )
 }
