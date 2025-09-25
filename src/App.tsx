@@ -10,7 +10,7 @@ import ServicesPage from './pages/ServicesPage';
 import CareersPage from './pages/CareersPage';
 import Footer from './components/footer/Footer';
 import Team from './components/team/Team';
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Loader from './components/Loader';
 import Stats from './components/stats/Stats';
 import Faq from './components/faq/Faq';
