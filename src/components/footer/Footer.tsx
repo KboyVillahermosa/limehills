@@ -1,9 +1,11 @@
 import React from 'react'
-import logo from '../../assets/images/footer-logo.png'
+import logo from '../../assets/images/logo.png'
+import Reveal from '../ui/Reveal'
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-gray-800">
+    <section id='footer'>
+    <footer className="bg-gray-900 text-white">
           <div
           aria-hidden="true"
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -17,69 +19,71 @@ const Footer: React.FC = () => {
           />
         </div>
       <div className="max-w-7xl mx-auto px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 items-start">
-          <div className="md:col-span-1">
-            <div className="flex items-center gap-4">
-              <img src={logo} alt="Limehills" className="h-12 w-auto object-contain" />
+        <Reveal>
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-8 items-start">
+            <div className="md:col-span-1">
+              <div className="flex items-center gap-4">
+                <img src={logo} alt="Limehills" className="h-12 w-auto object-contain" />
+              </div>
+            </div>
+
+            <div className="md:col-span-4 grid grid-cols-2 sm:grid-cols-4 gap-8">
+              <div>
+                <h4 className="text-white font-semibold mb-4">Links</h4>
+                <ul className="space-y-4 text-white">
+                  <li>
+                    <a href="#" className="hover:text-white">Support</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="text-white font-semibold mb-4">Legal</h4>
+                <ul className="space-y-4 text-white">
+                  <li>
+                    <a href="#" className="hover:text-white">Privacy Policy</a>
+                  </li>
+                  <li>
+                    <a href="#" className="hover:text-white">Terms of Use</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="text-white font-semibold mb-4">Social</h4>
+                <ul className="space-y-4 text-white">
+                  <li>
+                    <a href="#" className="hover:text-white">Facebook</a>
+                  </li>
+                  <li>
+                    <a href="#" className="hover:text-white">LinkedIn</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="text-white font-semibold mb-4">Company</h4>
+                <ul className="space-y-4 text-white">
+                  <li>
+                    <a href="#" className="hover:text-white">About</a>
+                  </li>
+                  <li>
+                    <a href="#" className="hover:text-white">Services</a>
+                  </li>
+                  <li>
+                    <a href="#" className="hover:text-white">Blog</a>
+                  </li>
+                  <li>
+                    <a href="#" className="hover:text-white">Careers</a>
+                  </li>
+                  <li>
+                    <a href="#" className="hover:text-white">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-
-          <div className="md:col-span-4 grid grid-cols-2 sm:grid-cols-4 gap-8">
-            <div>
-              <h4 className="text-[#3b40d6] font-semibold mb-4">Links</h4>
-              <ul className="space-y-4 text-gray-600">
-                <li>
-                  <a href="#" className="hover:text-gray-800">Support</a>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="text-[#3b40d6] font-semibold mb-4">Legal</h4>
-              <ul className="space-y-4 text-gray-600">
-                <li>
-                  <a href="#" className="hover:text-gray-800">Privacy Policy</a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-gray-800">Terms of Use</a>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="text-[#3b40d6] font-semibold mb-4">Social</h4>
-              <ul className="space-y-4 text-gray-600">
-                <li>
-                  <a href="#" className="hover:text-gray-800">Facebook</a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-gray-800">LinkedIn</a>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="text-[#3b40d6] font-semibold mb-4">Company</h4>
-              <ul className="space-y-4 text-gray-600">
-                <li>
-                  <a href="#" className="hover:text-gray-800">About</a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-gray-800">Services</a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-gray-800">Blog</a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-gray-800">Careers</a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-gray-800">Contact Us</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        </Reveal>
       </div>
 
       <div className="border-t border-gray-200">
@@ -92,6 +96,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
     </footer>
+    </section>
   )
 }
 
