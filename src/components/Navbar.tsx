@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import LogoNavbar from '/src/assets/images/logo.png'
 
 const navigation = [
   { name: 'Home', href: '#' },
@@ -39,7 +40,7 @@ export default function Example() {
             <a href="#" className="-m-1.5 p-1.5">
               <img
                 alt=""
-                src="/src/assets/images/logo.png"
+                src={LogoNavbar}
                 className="h-8 w-auto"
               />
             </a>
