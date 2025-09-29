@@ -1,6 +1,6 @@
 import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
 import Reveal from '../ui/Reveal'
-import AboutImage from '../../assets/images/company.JPG'
+import AboutImage from '../../assets/images/company.jpg'
 
 const features = [
   {

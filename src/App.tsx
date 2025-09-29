@@ -15,6 +15,7 @@ import Loader from './components/Loader';
 import Stats from './components/stats/Stats';
 import Faq from './components/faq/Faq';
 import ClientsSlider from './components/clients/ClientsSlider';
+import Project from './components/project/Project';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -46,6 +47,7 @@ function App() {
           <ClientsSlider />
           <Stats />
           <About />
+          <Project />
           <Team />
           <Faq /> 
           <Work />

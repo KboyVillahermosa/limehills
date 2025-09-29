@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
-import logoMain from '/src/assets/images/logo.png'
-import logoFooter from '/src/assets/images/jam.png'
-import logoAlin from '/src/assets/images/alin.png'
-import logoBigasan from '/src/assets/images/image.png'
-import logoReact from '/src/assets/images/eagles.png'
+import logoMain from '../../assets/images/logo.png'
+import logoFooter from '../../assets/images/jam.png'
+import logoAlin from '../../assets/images/alin.png'
+import logoBigasan from '../../assets/images/image.png'
+import logoReact from '../../assets/images/eagles.png'
 
 const logos = [logoMain, logoFooter, logoAlin, logoBigasan, logoReact]
 const REPEAT_FACTOR = 4
