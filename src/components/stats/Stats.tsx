@@ -30,13 +30,13 @@ export default function Stats() {
   }, []);
 
   return (
-    <div className="bg-gray-900 py-34" ref={ref}>
+    <div className="bg-white dark:bg-gray-950 py-34" ref={ref}>
       <div className="mx-auto max-w-6xl px-4">
         <Reveal>
           <dl className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-12 text-center">
             {stats.map((stat) => (
               <div key={stat.id} className="flex flex-col items-center">
-                <dd className="text-7xl font-bold text-white mb-2">
+                <dd className="text-7xl font-bold text-gray-900 dark:text-white mb-2">
                   {visible ? (
                     <span className="inline-block align-middle">+
                       <CountUp
@@ -51,7 +51,7 @@ export default function Stats() {
                     <>+{stat.value}</>
                   )}
                 </dd>
-                <dt className="text-lg text-gray-300 font-medium mt-2">
+                <dt className="text-lg text-gray-600 dark:text-gray-300 font-medium mt-2">
                   {stat.label}
                 </dt>
               </div>

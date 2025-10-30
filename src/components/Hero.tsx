@@ -3,7 +3,7 @@ import Reveal from './ui/Reveal'
 
 export default function Hero() {
   return (
-    <div className="bg-gray-900">
+    <div className="bg-white dark:bg-gray-950">
       <div className="relative isolate px-6 lg:px-8">
         <div
           aria-hidden="true"
@@ -29,20 +29,20 @@ export default function Hero() {
           </div>
           <Reveal className="text-center">
             {/* Limit the width and ensure long/unbroken text wraps instead of overflowing */}
-            <h1 className="mx-auto max-w-8xl text-5xl font-semibold tracking-tight text-balance text-white sm:text-6xl md:text-7xl lg:text-8xl break-words whitespace-normal">
+            <h1 className="mx-auto max-w-8xl text-5xl font-semibold tracking-tight text-balance text-gray-900 dark:text-gray-100 sm:text-6xl md:text-7xl lg:text-8xl break-words whitespace-normal">
               Your Partner in Productivity 
             </h1>
-            <p className="mt-8 text-lg font-medium text-pretty text-gray-400 sm:text-xl/8">
+            <p className="mt-8 text-lg font-medium text-pretty text-gray-600 dark:text-gray-300 sm:text-xl/8">
               Limehills is a trusted partner providing software development, DevOps, and consulting to help businesses operate smarter.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
                 href="#"
-                className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+                className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
               >
                 Get started
               </a>
-              <a href="#" className="text-sm/6 font-semibold text-white">
+              <a href="#" className="text-sm/6 font-semibold text-gray-900 dark:text-gray-200">
                 Learn more <span aria-hidden="true">→</span>
               </a>
             </div>

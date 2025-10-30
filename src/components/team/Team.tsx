@@ -42,12 +42,12 @@ import Reveal from '../ui/Reveal'
 
 export default function Example() {
   return (
-    <section className="bg-gray-900 py-20 sm:py-28" id="team">
+    <section className="bg-white dark:bg-gray-950 py-20 sm:py-28" id="team">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <Reveal>
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">Meet our leadership</h2>
-            <p className="mt-4 text-lg text-gray-400">
+            <h2 className="text-3xl font-semibold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl">Meet our leadership</h2>
+            <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
               We’re a dynamic group of individuals who are passionate about what we do and dedicated to delivering the
               best results for our clients.
             </p>
@@ -62,8 +62,8 @@ export default function Example() {
             {people.map((person) => (
               <li key={person.name}>
                 <div className="group relative rounded-2xl bg-gradient-to-b from-slate-800/80 via-slate-700/60 to-slate-900/80 p-1 shadow-xl hover:shadow-2xl transition-shadow duration-300">
-                  <div className="overflow-hidden rounded-xl bg-gray-900 transition-shadow duration-300 group-hover:shadow-2xl border border-slate-800">
-                    <div className="w-full overflow-hidden rounded-t-xl bg-gray-900 aspect-[4/5] flex items-center justify-center">
+                  <div className="overflow-hidden rounded-xl bg-gray-900 dark:bg-gray-950 transition-shadow duration-300 group-hover:shadow-2xl border border-slate-800/80">
+                    <div className="w-full overflow-hidden rounded-t-xl bg-gray-900 dark:bg-gray-950 aspect-[4/5] flex items-center justify-center">
                       <img 
                         src={person.imageUrl} 
                         alt={person.name} 
@@ -72,7 +72,7 @@ export default function Example() {
                       />
                     </div>
                     <div className="p-6">
-                      <h3 className="text-lg font-semibold text-white">{person.name}</h3>
+                      <h3 className="text-lg font-semibold text-white dark:text-gray-100">{person.name}</h3>
                       <p className="mt-1 text-sm text-indigo-300">{person.role}</p>
 
                       <div className="mt-4 flex items-center gap-4">

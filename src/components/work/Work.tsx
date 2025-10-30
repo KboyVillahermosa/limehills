@@ -34,23 +34,23 @@ import Reveal from '../ui/Reveal'
 
 const Work: React.FC = () => {
   return (
-    <section id="work" className="w-full bg-gray-900 py-20">
+    <section id="work" className="w-full bg-white dark:bg-gray-950 py-20">
       <div className="mx-auto max-w-6xl px-6 text-center">
         <Reveal>
-          <h2 className="text-4xl md:text-6xl font-extrabold text-[#3b40d6] mb-12">How we work</h2>
+          <h2 className="text-4xl md:text-6xl font-extrabold text-[#3b40d6] dark:text-indigo-400 mb-12">How we work</h2>
         </Reveal>
         <Reveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {steps.map((step) => (
               <div
                 key={step.id}
-                className="group relative bg-gray-800 rounded-2xl shadow-lg p-8 flex flex-col items-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                className="group relative bg-gray-800 dark:bg-gray-900 rounded-2xl shadow-lg p-8 flex flex-col items-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl"
               >
                 <div className={`w-16 h-16 flex items-center justify-center rounded-full text-3xl font-bold mb-4 ${step.color} transition-all duration-300 group-hover:scale-110`}>
                   {step.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{step.label}</h3>
-                <p className="text-gray-400 text-base mb-2">{step.description}</p>
+                <h3 className="text-xl font-semibold text-white dark:text-gray-100 mb-2">{step.label}</h3>
+                <p className="text-gray-400 dark:text-gray-300 text-base mb-2">{step.description}</p>
               </div>
             ))}
           </div>

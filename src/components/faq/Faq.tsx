@@ -56,11 +56,11 @@ export default function Faq() {
     setOpenIndex(prev => (prev === i ? null : i));
 
   return (
-    <section id="faq" className="bg-gray-900 text-white py-20">
+    <section id="faq" className="bg-white dark:bg-gray-950 text-gray-900 dark:text-white py-20">
       <div className="mx-auto max-w-5xl px-6 lg:px-8">
         <h2 className="text-5xl font-extrabold tracking-tight mb-8">Frequently asked questions</h2>
 
-        <div className="divide-y divide-gray-800">
+        <div className="divide-y divide-gray-200 dark:divide-gray-800">
           {faqs.map((qa, i) => {
             const open = openIndex === i;
             return (
@@ -70,8 +70,8 @@ export default function Faq() {
                   aria-expanded={open}
                   className="w-full flex items-center justify-between text-left gap-6"
                 >
-                  <span className="text-lg font-semibold text-gray-100">{qa.question}</span>
-                  <span className="flex-shrink-0 text-indigo-400">
+                  <span className="text-lg font-semibold text-gray-900 dark:text-gray-100">{qa.question}</span>
+                  <span className="flex-shrink-0 text-indigo-600 dark:text-indigo-400">
                     <svg
                       className={`transform transition-transform duration-200 ${open ? 'rotate-45' : 'rotate-0'}`}
                       xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +93,7 @@ export default function Faq() {
 
                 <div
                   aria-hidden={!open}
-                  className={`mt-4 text-gray-300 text-base overflow-hidden transition-all duration-200 ${
+                  className={`mt-4 text-gray-600 dark:text-gray-300 text-base overflow-hidden transition-all duration-200 ${
                     open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                   }`}
                 >

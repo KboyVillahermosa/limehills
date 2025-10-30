@@ -43,12 +43,12 @@ export default function ClientsSlider() {
   }
 
   return (
-    <div className=" bg-gray-900 p-16">
+    <div className="bg-white dark:bg-gray-950 p-16">
       <div className="mx-auto max-w-7xl px-12">
         <div className="flex items-center justify-center gap-6">
-          <span className="hidden sm:block flex-1 h-px bg-white/10" />
-          <p className="mx-6 text-center text-sm font-semibold text-gray-300">Loved by 10+ big and small brands around the worlds</p>
-          <span className="hidden sm:block flex-1 h-px bg-white/10" />
+          <span className="hidden sm:block flex-1 h-px bg-gray-300 dark:bg-white/10" />
+          <p className="mx-6 text-center text-sm font-semibold text-gray-700 dark:text-gray-300">Loved by 10+ big and small brands around the worlds</p>
+          <span className="hidden sm:block flex-1 h-px bg-gray-300 dark:bg-white/10" />
         </div>
       </div>
 <div

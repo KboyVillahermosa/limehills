@@ -38,12 +38,12 @@ const projects: ProjectItem[] = [
 
 export default function Project() {
   return (
-    <section className="bg-gray-900 py-20 sm:py-28" id="projects">
+    <section className="bg-white dark:bg-gray-950 py-20 sm:py-28" id="projects">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <Reveal>
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">Selected projects</h2>
-            <p className="mt-4 text-lg text-gray-400">
+            <h2 className="text-3xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-4xl">Selected projects</h2>
+            <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
               We craft solutions that are beautiful, accessible, and performance-minded. Here are a few highlights.
             </p>
           </div>
@@ -57,7 +57,7 @@ export default function Project() {
                 <div className="pointer-events-none absolute -top-6 -right-6 w-40 h-40 bg-gradient-to-tr from-indigo-600/30 to-purple-600/20 rounded-full blur-3xl opacity-60" />
 
                 <div className="relative rounded-2xl bg-gradient-to-b from-slate-800/80 via-slate-700/60 to-slate-900/80 shadow-2xl overflow-hidden">
-                  <a href={p.href} className="block">
+                  <div className="block">
                         <div className="w-full aspect-[21/10] md:aspect-[21/9] bg-gray-800 overflow-hidden"> 
                       <img
                         src={p.image}
@@ -91,7 +91,7 @@ export default function Project() {
                         </a>
                       </div>
                     </div>
-                  </a>
+                  </div>
                 </div>
               </article>
             ))}

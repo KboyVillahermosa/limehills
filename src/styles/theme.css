@@ -17,6 +17,12 @@
   --container-max: 1200px;
 }
 
+/* Dark theme overrides (via Tailwind's class strategy) */
+.dark {
+  --color-bg: #0b1020;
+  --color-text: #e6e9f5;
+}
+
 /* basic resets for the app */
 html,body,#root{height:100%}
 body{font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:var(--color-bg); color:var(--color-text);}
