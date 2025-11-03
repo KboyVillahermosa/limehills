@@ -53,10 +53,7 @@ const Footer: React.FC = () => {
                 <h4 className="text-white font-semibold mb-4">Social</h4>
                 <ul className="space-y-4 text-gray-300">
                   <li>
-                    <a href="#" className="hover:text-white transition-colors">Facebook</a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
+                    <a href="https://www.facebook.com/limehillsconsulting" target='_blank' className="hover:text-white transition-colors">Facebook</a>
                   </li>
                 </ul>
               </div>
