@@ -1,5 +1,6 @@
 import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
 import Reveal from '../ui/Reveal'
+import AboutImage from '../../assets/images/limes.jpg'
 
 const features = [
   {
@@ -54,15 +55,12 @@ export default function About() {
             </div>
           </div>
           <Reveal>
-            <div className="relative w-full max-w-3xl aspect-[4/3] rounded-xl shadow-xl ring-1 ring-white/10 overflow-hidden bg-gradient-to-br from-indigo-900/20 via-purple-900/20 to-pink-900/20 sm:w-full md:-ml-4 lg:-ml-0">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center p-8">
-                  <CloudArrowUpIcon className="w-16 h-16 mx-auto text-indigo-400/50 mb-4" />
-                  <p className="text-gray-400 text-sm">Technology Solutions</p>
-                </div>
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent" />
-            </div>
+            <img
+              alt="Product screenshot"
+              src={AboutImage}
+              height={1442}
+              className="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-white/10 sm:w-228 md:-ml-4 lg:-ml-0"
+            />
           </Reveal>
         </Reveal>
       </div>
