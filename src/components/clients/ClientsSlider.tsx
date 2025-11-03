@@ -43,32 +43,43 @@ export default function ClientsSlider() {
   }
 
   return (
-    <div className=" bg-gray-900 p-16">
-      <div className="mx-auto max-w-7xl px-12">
-        <div className="flex items-center justify-center gap-6">
+    <div className="bg-gray-900 py-12 sm:py-16 lg:py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-center gap-4 sm:gap-6">
           <span className="hidden sm:block flex-1 h-px bg-white/10" />
-          <p className="mx-6 text-center text-sm font-semibold text-gray-300">Loved by 10+ big and small brands around the worlds</p>
+          <p className="mx-4 sm:mx-6 text-center text-xs sm:text-sm font-semibold text-gray-300">
+            Loved by 10+ big and small brands around the world
+          </p>
           <span className="hidden sm:block flex-1 h-px bg-white/10" />
         </div>
       </div>
-<div
-  ref={containerRef}
-  className="relative mt-8 overflow-hidden w-full max-w-[1000rem] mx-auto"
-  onMouseEnter={() => setIsPaused(true)}
-  onMouseLeave={() => setIsPaused(false)}
-  onFocus={() => setIsPaused(true)}
-  onBlur={() => setIsPaused(false)}
-  aria-label="Client logos carousel"
->
-
+      <div
+        ref={containerRef}
+        className="relative mt-6 sm:mt-8 overflow-hidden w-full mx-auto"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+        onFocus={() => setIsPaused(true)}
+        onBlur={() => setIsPaused(false)}
+        aria-label="Client logos carousel"
+      >
         <style>
           {`
             .clients-track {
               display: flex;
-              gap: 1.5rem; /* Increased gap for more spacing */
+              gap: 1rem;
               align-items: center;
               will-change: transform;
               animation: scroll var(--scroll-duration, 12s) linear infinite;
+            }
+            @media (min-width: 640px) {
+              .clients-track {
+                gap: 1.5rem;
+              }
+            }
+            @media (min-width: 1024px) {
+              .clients-track {
+                gap: 2rem;
+              }
             }
             .clients-track.paused { animation-play-state: paused; }
             @keyframes scroll {
@@ -81,7 +92,7 @@ export default function ClientsSlider() {
         {/* track duplicated for seamless loop */}
         <div
           ref={trackRef}
-          className={`clients-track ${isPaused ? 'paused' : ''} px-8 py-6 sm:px-20 sm:py-8`}
+          className={`clients-track ${isPaused ? 'paused' : ''} px-4 py-4 sm:px-8 sm:py-6 md:px-12 md:py-8`}
           role="list"
         >
           {Array.from({ length: REPEAT_FACTOR }).flatMap((_, g) =>
@@ -89,9 +100,14 @@ export default function ClientsSlider() {
               <div
                 key={g * logos.length + i}
                 role="listitem"
-                className="flex min-w-[140px] sm:min-w-[220px] items-center justify-center p-6"
+                className="flex min-w-[80px] sm:min-w-[120px] md:min-w-[150px] lg:min-w-[180px] items-center justify-center p-3 sm:p-4 md:p-5"
               >
-                <img src={src} alt={`Client logo ${i + 1}`} className="max-h-20 sm:max-h-28 object-contain" onLoad={onImgLoad} />
+                <img 
+                  src={src} 
+                  alt={`Client logo ${i + 1}`} 
+                  className="max-h-10 sm:max-h-14 md:max-h-16 lg:max-h-20 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300" 
+                  onLoad={onImgLoad} 
+                />
               </div>
             )),
           )}

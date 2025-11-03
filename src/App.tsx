@@ -16,6 +16,8 @@ import Stats from './components/stats/Stats';
 import Faq from './components/faq/Faq';
 import ClientsSlider from './components/clients/ClientsSlider';
 import Project from './components/project/Project';
+import Grid from './components/grid/Grind';
+import Services from './components/services/Services';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -49,8 +51,10 @@ function App() {
           <About />
           <Project />
           <Team />
+          <Grid />
           <Faq /> 
           <Work />
+          <Services />
         </main>
       )}
       <Footer />
