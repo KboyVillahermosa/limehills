@@ -58,7 +58,12 @@ export default function Faq() {
   return (
     <section id="faq" className="bg-gray-900 text-white py-20">
       <div className="mx-auto max-w-5xl px-6 lg:px-8">
-        <h2 className="text-5xl font-extrabold tracking-tight mb-8">Frequently asked questions</h2>
+        <h2 className="text-3xl font-bold tracking-tight mb-8 text-white sm:text-4xl lg:text-5xl">
+          <span className="block">Frequently asked</span>
+          <span className="block italic font-light text-gray-300 font-serif">
+            questions
+          </span>
+        </h2>
 
         <div className="divide-y divide-gray-800">
           {faqs.map((qa, i) => {
@@ -70,7 +75,7 @@ export default function Faq() {
                   aria-expanded={open}
                   className="w-full flex items-center justify-between text-left gap-6"
                 >
-                  <span className="text-lg font-semibold text-gray-100">{qa.question}</span>
+                  <span className="text-lg font-semibold text-white">{qa.question}</span>
                   <span className="flex-shrink-0 text-indigo-400">
                     <svg
                       className={`transform transition-transform duration-200 ${open ? 'rotate-45' : 'rotate-0'}`}
@@ -93,7 +98,7 @@ export default function Faq() {
 
                 <div
                   aria-hidden={!open}
-                  className={`mt-4 text-gray-300 text-base overflow-hidden transition-all duration-200 ${
+                  className={`mt-4 text-gray-300 text-base leading-7 overflow-hidden transition-all duration-200 ${
                     open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                   }`}
                 >
