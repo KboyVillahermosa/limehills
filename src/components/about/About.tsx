@@ -32,13 +32,16 @@ export default function About() {
           <div className="lg:pt-4 lg:pr-8">
             <div className="lg:max-w-lg">
               <h2 className="text-base/7 font-semibold text-indigo-400">Deploy faster</h2>
-              <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl">
-                A better workflow
+              <p className="mt-2 text-4xl font-bold tracking-tight text-pretty text-white sm:text-5xl">
+                <span className="block">A better</span>
+                <span className="block italic font-light text-gray-300 font-serif">
+                  workflow
+                </span>
               </p>
               <p className="mt-6 text-lg/8 text-gray-300">
                Limehills is a software consulting firm specializing in software development, configuration, and support services. We excel in delivering tailored solutions across a range of areas, including Software Development, DevOps Engineering, and Software Consulting.
               </p>
-              <dl className="mt-10 max-w-xl space-y-8 text-base/7 text-gray-400 lg:max-w-none">
+              <dl className="mt-10 max-w-xl space-y-8 text-base/7 text-gray-300 lg:max-w-none">
                 {features.map((feature) => (
                   <div key={feature.name} className="relative pl-9">
                     <dt className="inline font-semibold text-white">
