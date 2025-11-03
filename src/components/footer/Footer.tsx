@@ -30,54 +30,54 @@ const Footer: React.FC = () => {
             <div className="md:col-span-4 grid grid-cols-2 sm:grid-cols-4 gap-8">
               <div>
                 <h4 className="text-white font-semibold mb-4">Links</h4>
-                <ul className="space-y-4 text-white">
+                <ul className="space-y-4 text-gray-300">
                   <li>
-                    <a href="#" className="hover:text-white">Support</a>
+                    <a href="#" className="hover:text-white transition-colors">Support</a>
                   </li>
                 </ul>
               </div>
 
               <div>
                 <h4 className="text-white font-semibold mb-4">Legal</h4>
-                <ul className="space-y-4 text-white">
+                <ul className="space-y-4 text-gray-300">
                   <li>
-                    <a href="#" className="hover:text-white">Privacy Policy</a>
+                    <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-white">Terms of Use</a>
+                    <a href="#" className="hover:text-white transition-colors">Terms of Use</a>
                   </li>
                 </ul>
               </div>
 
               <div>
                 <h4 className="text-white font-semibold mb-4">Social</h4>
-                <ul className="space-y-4 text-white">
+                <ul className="space-y-4 text-gray-300">
                   <li>
-                    <a href="#" className="hover:text-white">Facebook</a>
+                    <a href="#" className="hover:text-white transition-colors">Facebook</a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-white">LinkedIn</a>
+                    <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
                   </li>
                 </ul>
               </div>
 
               <div>
                 <h4 className="text-white font-semibold mb-4">Company</h4>
-                <ul className="space-y-4 text-white">
+                <ul className="space-y-4 text-gray-300">
                   <li>
-                    <a href="#" className="hover:text-white">About</a>
+                    <a href="#" className="hover:text-white transition-colors">About</a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-white">Services</a>
+                    <a href="#" className="hover:text-white transition-colors">Services</a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-white">Blog</a>
+                    <a href="#" className="hover:text-white transition-colors">Blog</a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-white">Careers</a>
+                    <a href="#" className="hover:text-white transition-colors">Careers</a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-white">Contact Us</a>
+                    <a href="#" className="hover:text-white transition-colors">Contact Us</a>
                   </li>
                 </ul>
               </div>
@@ -86,12 +86,12 @@ const Footer: React.FC = () => {
         </Reveal>
       </div>
 
-      <div className="border-t border-gray-200">
-        <div className="max-w-7xl mx-auto px-8 py-6 flex justify-between items-center text-sm text-gray-500">
+      <div className="border-t border-gray-700/50">
+        <div className="max-w-7xl mx-auto px-8 py-6 flex justify-between items-center text-sm text-gray-300">
           <p>© {new Date().getFullYear()} Limehills — All rights reserved.</p>
           <div className="flex items-center space-x-6">
-            <a href="#" className="hover:text-gray-700">Privacy</a>
-            <a href="#" className="hover:text-gray-700">Terms</a>
+            <a href="#" className="hover:text-white transition-colors">Privacy</a>
+            <a href="#" className="hover:text-white transition-colors">Terms</a>
           </div>
         </div>
       </div>
