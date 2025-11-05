@@ -7,9 +7,9 @@ import LogoNavbar from '../assets/images/logo.png'
 const navigation = [
   { name: 'Home', href: '/', isSection: false },
   { name: 'About', href: '#about', isSection: true },
-  { name: 'Services', href: '#services', isSection: true },
-  { name: 'Work', href: '#work', isSection: true },
   { name: 'Team', href: '#team', isSection: true },
+  { name: 'Work', href: '#work', isSection: true },
+  { name: 'Services', href: '#services', isSection: true },
 ]
 
 export default function Example() {
@@ -26,6 +26,9 @@ export default function Example() {
   }, [])
 
   const handleNavigation = (href: string, isSection: boolean) => {
+    // Close mobile menu first
+    setMobileMenuOpen(false)
+    
     if (isSection) {
       // If we're on the contact page, navigate to home first with hash
       if (window.location.pathname === '/contact') {
@@ -41,7 +44,6 @@ export default function Example() {
       // Regular page navigation
       window.location.href = href
     }
-    setMobileMenuOpen(false)
   }
 
   return (
@@ -143,8 +145,8 @@ export default function Example() {
                     href="/contact"
                     onClick={(e) => {
                       e.preventDefault()
-                      window.location.href = '/contact'
                       setMobileMenuOpen(false)
+                      window.location.href = '/contact'
                     }}
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-white/5"
                   >

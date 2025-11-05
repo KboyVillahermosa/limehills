@@ -150,7 +150,7 @@ export default function Services() {
                 Tell us about your project and we'll advise the best approach.
               </p>
               <a
-                href="#contact"
+                href="/contact"
                 className="inline-flex items-center justify-center rounded-lg bg-indigo-600 px-6 py-2.5 text-sm font-semibold text-white transition-all hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
               >
                 Get in touch

@@ -18,13 +18,13 @@ export default function Hero() {
           />
         </div>
         <div className="mx-auto max-w-7xl pt-16 sm:pt-20 lg:pt-24 pb-24 sm:pb-32 lg:pb-40">
-          <div className="mb-8 flex justify-center">
-            <div className="group relative rounded-full bg-white/5 px-4 py-1.5 text-sm leading-6 text-gray-300 ring-1 ring-white/10 transition-all hover:ring-white/20">
-              <span className="inline-flex items-center gap-x-2">
-                Empowering businesses to achieve more.{' '}
+          <div className="mb-8 flex justify-center px-4">
+            <div className="group relative rounded-full bg-white/5 px-3 py-1.5 sm:px-4 text-xs sm:text-sm leading-5 sm:leading-6 text-gray-300 ring-1 ring-white/10 transition-all hover:ring-white/20 max-w-full mx-auto">
+              <span className="flex flex-wrap items-center justify-center gap-x-1.5 sm:gap-x-2 gap-y-1 text-center">
+                <span className="sm:whitespace-nowrap">Empowering businesses to achieve more.</span>
                 <a
                   href="#services"
-                  className="font-semibold text-indigo-400 transition-colors hover:text-indigo-300"
+                  className="font-semibold text-indigo-400 transition-colors hover:text-indigo-300 sm:whitespace-nowrap"
                 >
                   Explore our services
                   <span aria-hidden="true" className="ml-1 inline">→</span>
@@ -44,27 +44,6 @@ export default function Hero() {
             <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-300 sm:text-xl sm:leading-9">
               At Limehills, we help businesses tackle complex challenges with tailored solutions, guiding you from strategy to success in a competitive market.
             </p>
-
-            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
-              <a
-                href="#contact"
-                className="rounded-lg bg-indigo-600 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-indigo-500/50 transition-all hover:bg-indigo-500 hover:shadow-xl hover:shadow-indigo-500/50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 active:scale-[0.98]"
-              >
-                Get started
-              </a>
-              <a
-                href="#about"
-                className="group inline-flex items-center gap-2 rounded-lg bg-white/10 px-6 py-3 text-base font-semibold text-white backdrop-blur-sm ring-1 ring-white/20 transition-all hover:bg-white/20 hover:ring-white/30 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-              >
-                Learn more
-                <span
-                  aria-hidden="true"
-                  className="transition-transform group-hover:translate-x-0.5"
-                >
-                  →
-                </span>
-              </a>
-            </div>
           </Reveal>
         </div>
         <div
