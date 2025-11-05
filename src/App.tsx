@@ -19,10 +19,19 @@ import Services from './components/services/Services';
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const [pathname, setPathname] = useState(window.location.pathname);
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 1200);
     return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    // Update pathname on navigation
+    const updatePathname = () => setPathname(window.location.pathname);
+    updatePathname();
+    window.addEventListener('popstate', updatePathname);
+    return () => window.removeEventListener('popstate', updatePathname);
   }, []);
 
   useEffect(() => {
@@ -47,7 +56,7 @@ function App() {
     <div className="app-root">
       {loading && <Loader />}
       <Navbar />
-      {window.location.pathname === '/contact' ? (
+      {pathname === '/contact' ? (
         <main>
           <Contact />
         </main>
