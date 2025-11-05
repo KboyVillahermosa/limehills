@@ -14,24 +14,24 @@ type ProjectItem = {
 
 const projects: ProjectItem[] = [
   {
-    title: 'Brand Identity Refresh',
-    description: 'A full brand identity system including logo, color palette, and guidelines for a growing tech startup.',
+    title: 'BigasanHub',
+    description: 'A comprehensive inventory management system designed to streamline operations and optimize stock control for businesses.',
     image: img1,
-    tags: ['Branding', 'Design', 'Strategy'],
+    tags: ['Inventory Management', 'Web Application', 'Database'],
     href: '#',
   },
   {
-    title: 'E-commerce Platform',
-    description: 'Design and front-end implementation of a high-converting e-commerce experience.',
+    title: 'Ukay-Ukay Inventory',
+    description: 'An efficient inventory management solution tailored for retail operations, enabling real-time tracking and seamless stock management.',
     image: img2,
-    tags: ['E‑commerce', 'Front-end', 'Performance'],
+    tags: ['Inventory System', 'Retail', 'Real-time Tracking'],
     href: '#',
   },
   {
-    title: 'Marketing Landing Page',
-    description: 'Fast, accessible landing pages optimized for paid acquisition and conversions.',
+    title: 'Corporate Law Firm Website',
+    description: 'A professional company website for a top law firm in Cebu, featuring modern design and seamless user experience.',
     image: img3,
-    tags: ['Marketing', 'A/B Testing', 'SEO'],
+    tags: ['Web Design', 'Corporate', 'Legal'],
     href: '#',
   },
 ]

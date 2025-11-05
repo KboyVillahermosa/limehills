@@ -14,7 +14,7 @@ export default function Grid() {
           </p>
         </Reveal>
         <Reveal>
-          <div className="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
+        <div className="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
             <div className="relative lg:row-span-2">
               <div className="absolute inset-px rounded-lg bg-gray-800 lg:rounded-l-4xl" />
               <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
@@ -109,8 +109,8 @@ export default function Grid() {
               </div>
               <div className="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-white/15 max-lg:rounded-b-4xl lg:rounded-r-4xl" />
             </div>
-          </div>
-        </Reveal>
+            </div>
+          </Reveal>
       </div>
     </div>
   )

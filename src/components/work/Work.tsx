@@ -138,8 +138,8 @@ const Work: React.FC = () => {
               const position = adjustedPositions[step.id]
               
               return (
-                <div
-                  key={step.id}
+              <div
+                key={step.id}
                   className="absolute group animate-fade-in-up"
                   style={{
                     left: position.x,
@@ -182,8 +182,8 @@ const Work: React.FC = () => {
                       <p className="text-xs text-gray-300 text-center leading-relaxed">{step.description}</p>
                       <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-gray-800/95 border-l border-t border-gray-700/50 rotate-45" />
                     </div>
-                  </div>
                 </div>
+              </div>
               )
             })}
           </div>

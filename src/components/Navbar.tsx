@@ -5,12 +5,11 @@ import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import LogoNavbar from '../assets/images/logo.png'
 const navigation = [
-  { name: 'Home', href: '#' },
-  { name: 'About', href: '#about' },
-  { name: 'Team', href: '#team' },
-  { name: 'Work', href: '#work' },
-  { name: 'Team', href: '#team' },
-  { name: 'Services', href: '#services' },  
+  { name: 'Home', href: '/', isSection: false },
+  { name: 'About', href: '#about', isSection: true },
+  { name: 'Services', href: '#services', isSection: true },
+  { name: 'Work', href: '#work', isSection: true },
+  { name: 'Team', href: '#team', isSection: true },
 ]
 
 export default function Example() {
@@ -26,6 +25,25 @@ export default function Example() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  const handleNavigation = (href: string, isSection: boolean) => {
+    if (isSection) {
+      // If we're on the contact page, navigate to home first with hash
+      if (window.location.pathname === '/contact') {
+        window.location.href = href
+      } else {
+        // On home page, just scroll to section
+        const element = document.querySelector(href)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' })
+        }
+      }
+    } else {
+      // Regular page navigation
+      window.location.href = href
+    }
+    setMobileMenuOpen(false)
+  }
+
   return (
     <div className="fixed w-full z-50">
       <header className="absolute inset-x-0 top-0 z-50">
@@ -36,7 +54,7 @@ export default function Example() {
           }`}
         >
           <div className="flex lg:flex-1">
-            <a href="#" className="-m-1.5 p-1.5">
+            <a href="/" className="-m-1.5 p-1.5">
               <img
                 alt=""
                 src={LogoNavbar}
@@ -56,13 +74,28 @@ export default function Example() {
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
-              <a key={item.name} href={item.href} className="text-sm/6 font-semibold text-white">
+              <a
+                key={item.name}
+                href={item.href}
+                onClick={(e) => {
+                  e.preventDefault()
+                  handleNavigation(item.href, item.isSection)
+                }}
+                className="text-sm/6 font-semibold text-white hover:text-indigo-400 transition-colors"
+              >
                 {item.name}
               </a>
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" className="text-sm/6 font-semibold text-white">
+            <a
+              href="/contact"
+              onClick={(e) => {
+                e.preventDefault()
+                window.location.href = '/contact'
+              }}
+              className="text-sm/6 font-semibold text-white hover:text-indigo-400 transition-colors"
+            >
               Contact Us
             </a>
           </div>
@@ -71,7 +104,7 @@ export default function Example() {
           <div className="fixed inset-0 z-50" />
           <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
             <div className="flex items-center justify-between">
-              <a href="#" className="-m-1.5 p-1.5">
+              <a href="/" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
                 <img
                   alt=""
@@ -95,6 +128,10 @@ export default function Example() {
                     <a
                       key={item.name}
                       href={item.href}
+                      onClick={(e) => {
+                        e.preventDefault()
+                        handleNavigation(item.href, item.isSection)
+                      }}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
                     >
                       {item.name}
@@ -103,7 +140,12 @@ export default function Example() {
                 </div>
                 <div className="py-6">
                   <a
-                    href="#"
+                    href="/contact"
+                    onClick={(e) => {
+                      e.preventDefault()
+                      window.location.href = '/contact'
+                      setMobileMenuOpen(false)
+                    }}
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-white/5"
                   >
                     Contact Us

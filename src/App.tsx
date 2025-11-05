@@ -5,9 +5,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/about/About';
 import Work from './components/work/Work';
-import AboutPage from './pages/AboutPage';
-import ServicesPage from './pages/ServicesPage';
-import CareersPage from './pages/CareersPage';
+import Contact from './pages/Contact';
 import Footer from './components/footer/Footer';
 import Team from './components/team/Team';
 import { useState, useEffect } from 'react';
@@ -27,21 +25,31 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    // Handle hash navigation after page loads
+    const handleHashScroll = () => {
+      if (window.location.hash) {
+        setTimeout(() => {
+          const element = document.querySelector(window.location.hash);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 500);
+      }
+    };
+
+    handleHashScroll();
+    window.addEventListener('hashchange', handleHashScroll);
+    return () => window.removeEventListener('hashchange', handleHashScroll);
+  }, []);
+
   return (
     <div className="app-root">
       {loading && <Loader />}
       <Navbar />
-      {window.location.pathname === '/about' ? (
+      {window.location.pathname === '/contact' ? (
         <main>
-          <AboutPage />
-        </main>
-      ) : window.location.pathname === '/services' ? (
-        <main>
-          <ServicesPage />
-        </main>
-      ) : window.location.pathname === '/careers' ? (
-        <main>
-          <CareersPage />
+          <Contact />
         </main>
       ) : (
         <main>
