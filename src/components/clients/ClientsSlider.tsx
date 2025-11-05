@@ -66,7 +66,7 @@ export default function ClientsSlider() {
           {`
             .clients-track {
               display: flex;
-              gap: 1rem;
+              gap: 1.5rem;
               align-items: center;
               will-change: transform;
               animation: scroll var(--scroll-duration, 12s) linear infinite;
@@ -100,12 +100,12 @@ export default function ClientsSlider() {
               <div
                 key={g * logos.length + i}
                 role="listitem"
-                className="flex min-w-[80px] sm:min-w-[120px] md:min-w-[150px] lg:min-w-[180px] items-center justify-center p-3 sm:p-4 md:p-5"
+                className="flex min-w-[140px] sm:min-w-[120px] md:min-w-[150px] lg:min-w-[180px] items-center justify-center p-4 sm:p-4 md:p-5"
               >
                 <img 
                   src={src} 
                   alt={`Client logo ${i + 1}`} 
-                  className="max-h-10 sm:max-h-14 md:max-h-16 lg:max-h-20 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300" 
+                  className="max-h-20 sm:max-h-14 md:max-h-16 lg:max-h-20 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300" 
                   onLoad={onImgLoad} 
                 />
               </div>
